@@ -1,0 +1,285 @@
+#include<iostream.h>
+#include<conio.h>
+
+    class supermarket
+ {
+ 	public:
+ 	int price,kgs;
+ 	char fruit[80];
+ 	
+ 		supermarket()
+ 	{
+ 		price=0;
+ 		kgs=0;
+ 		
+ 	}
+ 	supermarket(int x,int y,int z)
+ 	{
+ 		price=x;
+ 		kgs=y;
+ 		
+ 	}
+ 		void inputveg()
+ {
+ 	cout<<"What do you like to prefer,vegetables or fruits?";
+ 	cin>>fruit;
+ 	cout<<"How many KGs do you want";
+ 	 cin>>kgs;
+ 	 price=15*kgs;
+ }
+ 	void displayveg()
+ {
+ 	cout<<"You have choosen:"<<fruit<<endl;
+ 	cout<<"kgs:"<<kgs<<endl;
+ 	cout<<" Your price is:"<<price<<endl;
+  }
+};
+    	class footwear:public supermarket
+{
+ 	public:
+ 	int size,amount;
+ 	char color[40],brand[50],gender[50],clothname[70];
+ 	
+ 	void inputfootwear()
+ 	{
+ 		cout<<"FOR MEN OR WOMEN?";
+ 		cin>>gender;
+ 		cout<<"Which type of foot wear do you like to prefer?";
+ 		cin>>clothname;
+ 		cout<<"Please enter your size:";
+ 		cin>>size;
+ 		cout<<"Which color do you want?";
+ 		cin>>color;
+ 		cout<<"Please enter your brand:";
+ 		cin>>brand;
+ 		
+ 		amount=500;
+ 	}
+ 		void displayfootwear()
+ 	{
+ 		cout<<"You have choosen:"<<clothname;
+ 		cout<<"You have choosen size:"<<size<<endl;
+ 		cout<<"You have choosen color:"<<color<<endl;
+ 		cout<<"You have choosen brand:"<<brand<<endl;
+ 		cout<<"YOUR PRICE IS:"<<amount<<endl;
+ 	}
+};
+		class drinks:public supermarket
+	{
+		
+		 public:
+		 int no;
+		 char drinkname[50];
+		 void inputdrink()
+		 {
+		 	cout<<"which drinks do you want?? ";
+		 	cin>>drinkname;
+		 	cout<<"Enter Quantity Of drinks:";
+		 	cin>>no;
+		 	price=10*no;
+		 }
+		 void displaydrink()
+		 {
+		 	cout<<"                                        "<<endl;
+		 	cout<<"You have choosen:"<<drinkname<<endl;
+		 	cout<<"------------------------------"<<endl;
+		  cout<<"                                        "<<endl;
+		 	cout<<"Number of quantity  you have choosen:"<<no<<endl;
+		 	cout<<"-------------------------------------------------------------"<<endl;
+		 	cout<<"price is :"<<price<<endl;
+		 }
+ };
+ 	class bakery:public footwear
+ 	{
+ 		public:
+ 		char productname[50];
+ 		int q;
+ 		void inputbakery()
+ 		{
+ 			
+ 		cout<<"Which type of bakery product do you want to prefer?";
+ 		cin>>productname;
+ 		cout<<"Quanity:";
+ 		cin>>q;
+ 		price=20*q;
+ 	}
+ 		void displaybakery()
+ 		{
+ 			cout<<"YOU HAVE CHOOSEN:"<<productname<<endl;
+ 			 cout<<"QUANITY:"<<q<<endl;
+ 			 cout<<"AMOUNT IS"<<price<<endl;
+ 		}
+ 	};
+ 	    class clothes:public footwear
+ 	    {
+ 	    		public:
+ 	int size,amount;
+ 	char color[40],brand[50],gender[50],clothname[70];
+ 	
+ 	void inputclothes()
+ 	{
+ 		cout<<"FOR MEN OR WOMEN?";
+ 		cin>>gender;
+ 		cout<<"Which type of clothes do you like to prefer?";
+ 		cin>>clothname;
+ 		cout<<"Please enter your size:";
+ 		cin>>size;
+ 		cout<<"Which color do you want?";
+ 		cin>>color;
+ 		cout<<"Please enter your brand:";
+ 		cin>>brand;
+ 		amount=400;
+ 		cout<<"YOUR PRICE IS:"<<amount<<endl;
+ 	}
+ 		void displayclothes()
+ 	{
+ 		cout<<"You have choosen:"<<clothname;
+ 		cout<<"You have choosen size:"<<size<<endl;
+ 		cout<<"You have choosen color:"<<color<<endl;
+ 		cout<<"You have choosen brand:"<<brand<<endl;
+ 	
+ 	}
+};
+	class snacks:public drinks
+	{
+		public:
+		int q;
+		char snackname[80];
+		void inputsnacks()
+		{
+			cout<<"Which snacks do you want?";
+			cin>>snackname;
+			cout<<"Please enter quantity:";
+			cin>>q;
+			price=10*q;
+		}
+	 void displaysnacks()
+	 {
+	 		cout<<"You have choosen:"<<snackname;
+ 		cout<<"You have choosen quantity:"<<q<<endl;
+ 		cout<<"YOUR PRICE IS:"<<price<<endl;
+ 	}
+};
+	class stationery:public drinks
+	{
+		public:
+		int q;
+		char statname[50];
+		void inputstationery()
+		{
+		cout<<"Which stationeries do you want?";
+		cin>>statname;
+		cout<<"Please enter quantity";
+		cin>>q;
+		price=10*q;
+	}
+	void displaystationery()
+	{
+	cout<<"You have choosen:"<<statname<<endl;
+ 	cout <<"Quantity:"<<q<<endl;
+ 	cout<<"YOUR PRICE IS:"<<price<<endl;
+	}
+};
+int  main()
+{
+		clrscr();
+		cout<<"*******************WELCOME TO FRESHCO SUPERMARKET!!***************"<<endl;
+		cout<<"                                                                                                                                     "<<endl;
+		cout<<"BUY DELICIOUS,FRESH AND GURMENT FOODS FOR YOUR FAMILY!!!!*"<<endl;
+		 cout<<"--------------------------------------------------------------------------------------"<<endl;
+		 		int phonenum;
+		 		char nameofcustomer[50];
+		 		 char email[50];
+		cout<<"Please enter your name:";
+		cin>>nameofcustomer;
+		cout<<"                                        "<<endl;
+		cout<<"Please enter your phone number:";
+		cin>>phonenum;
+		cout<<"                                        "<<endl;
+		cout<<"Please enter your E-mail:";
+		cin>>email;
+	    cout<<"YOUR ACCOUNT HAS BEEN CREATED!!!"<<endl;
+	    cout<<"--------------------------------------------------------------------------------------"<<endl;
+	    cout<<"                                                                                                     "<<endl;
+	    	cout<<"-----------1.VEGETABLES AND FRUITS----------------"<<endl;
+	    	cout<<"                                        "<<endl;
+	    	cout<<"-----------2.FOOT WEAR-------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	cout<<"-----------3.DRINKS-------------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	cout<<"-----------4.BAKERY--------------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	cout<<"------------5.CLOTHES---------------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	cout<<"------------6.SNACKS---------------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	cout<<"------------7.STATIONERIES---------------------------------------------"<<endl;
+		 	cout<<"                                        "<<endl;
+		 	
+		 	int op;
+		 	cout<<"PLACE YOUR ORDER NO:"<<endl;
+		 		cout<<"                                        "<<endl;
+		 	cin>>op;
+		 	
+		 	if(op==1)
+		 	{
+		 		supermarket su;
+		 		 su.inputveg();
+		 		 su.displayveg();
+		 	}
+		 		else if(op==2)
+		 	{
+		 	 	footwear f;
+		 	 	f.inputfootwear();
+		 	 	f.displayfootwear();
+		 	}
+		 		 else if(op==3)
+		 	{
+		 		drinks d;
+		 		d.inputdrink();
+		 		d.displaydrink();
+		 	}
+ 					else if(op==4)
+		 	{
+		 		bakery b;
+		 		b.inputbakery();
+		 		b.displaybakery();
+		 	}
+		 	 else if(op==5)
+		 	{
+		 		clothes c;
+		 		c.inputclothes();
+		 		c.displayclothes();
+		 	}
+		 	 else if(op==6)
+		 	{
+		 		snacks s;
+		 		s.inputsnacks();
+		 		s.displaysnacks();
+		 	}
+		 	 else  if(op==7)
+		 	 {
+		 	 	stationery g;
+		 	 	g.inputstationery();
+		 	 	g.displaystationery();
+		 	 }
+		 	 char choice,no;
+		 	 int i;
+		 	 cout<<"DO YOU WANT BUY ANOTHER PODUCT?";
+		 	 cin>>choice;
+		 	 if(choice==no)
+		 	 {
+		 	 	cout<<"YOU HAVE TO PAY THE TOTAL AMOUNT:";
+		 	 	cout<<"--------------------------------"<<endl;
+		 	 	cout<<"ITEMS:"<<endl;;
+		 	 	cout<<"-------------------------------"<<endl;
+		 
+		 	 	
+		 	 }
+		 	 else
+		 	 {
+		 	 	cout<<"PLACE YOUR NUMBER:";
+		 	 }
+		 	 
+		 	 return 0;
+}
